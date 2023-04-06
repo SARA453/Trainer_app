@@ -16,7 +16,7 @@ const HamburgerMenu = () => {
         <NavLink
           to={"/home"}
           className={({ isActive }) =>
-            isActive ? "text-green-400 " : "text-black"
+            isActive ? "text-green-600 " : "text-black"
           }
         >
           <button>Home</button>
@@ -24,7 +24,7 @@ const HamburgerMenu = () => {
         <NavLink
           to={"/search"}
           className={({ isActive }) =>
-            isActive ? "text-green-400 " : "text-black"
+            isActive ? "text-green-600 " : "text-black"
           }
         >
           <button>Search</button>{" "}
@@ -32,7 +32,7 @@ const HamburgerMenu = () => {
         <NavLink
           to={"/myschedule"}
           className={({ isActive }) =>
-            isActive ? "text-green-400 " : "text-black"
+            isActive ? "text-green-600 " : "text-black"
           }
         >
           <button>My Schedule</button>{" "}
@@ -40,7 +40,7 @@ const HamburgerMenu = () => {
         <NavLink
           to={"/login"}
           className={({ isActive }) =>
-            isActive ? "text-green-400 " : "text-black"
+            isActive ? "text-green-600 " : "text-black"
           }
         >
           <button>Log in</button>

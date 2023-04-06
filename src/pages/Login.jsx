@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import { useId } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import useMutation from "../hooks/useMutation";
-import gym from "../images/gym.png";
+import Gym from "../images/Gym.jpeg";
 
 const initialValues = {
   username: "",
@@ -44,8 +44,8 @@ const Login = () => {
 
   return (
     <form
-      className="flex flex-col  justify-center items-center h-screen bg-red-200"
-      style={{ backgroundImage: `url(${gym})` }}
+      className="flex flex-col  justify-center items-center h-screen bg-red-200 min-h-screen bg-cover bg-center"
+      style={{ backgroundImage: `url(${Gym})` }}
       onSubmit={formik.handleSubmit}
     >
       <input

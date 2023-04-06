@@ -25,7 +25,7 @@ const Search = () => {
   return (
     <div className="container mx-auto">
       <div className="flex flex-col">
-        <p className="text-4xl text-green-400 font-mono">Search</p>
+        <p className="text-4xl text-green-600 font-mono">Search</p>
         <div className="relative">
           <input
             type="text"
@@ -42,7 +42,7 @@ const Search = () => {
 
       {filteredClasses.length > 0 && (
         <div>
-          <p className="text-2xl mt-7 text-green-400  font-mono">
+          <p className="text-2xl mt-7 text-green-600  font-mono">
             Popular Classes
           </p>
           <div className="grid grid-cols-3">
@@ -55,7 +55,7 @@ const Search = () => {
 
       {filteredTrainers.length > 0 && (
         <div>
-          <p className="text-2xl text-green-400 font-mono mt-5">
+          <p className="text-2xl text-green-600 font-mono mt-5">
             Popular Trainers
           </p>
           <div className="grid grid-cols-4  mt-5">

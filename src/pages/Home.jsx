@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import Carousel from "../components/Carousel";
 import Class from "../components/Class";
 import useQuery from "../hooks/useQuery";
-import gym from "../images/gym.png";
+import Gym from "../images/Gym.jpeg";
 
 const getClasses = async () => {
   const { data } = await axios.get("http://localhost:4000/api/v1/classes");
@@ -21,46 +21,63 @@ const getRatings = async (classId) => {
 const Home = () => {
   return (
     <div>
-      <div className="flex flex-col items-center mt-6">
+      
         <div className="relative w-full">
           <img
-            src="http://localhost:4000/file-bucket/1583694115775lower-abs1.jpg"
-            className="w-full mt-8 h-[450px]"
+            src={Gym}
+            className="w-full mt-8  h-screen bg-cover bg-center"
           />
-          <p className="absolute top-[63%] left-[4%] text-white text-5xl">
-            Lower Abs <br /> Workout
-          </p>
+         
         </div>
-      </div>
+     
 
-      <div className="justify-center items-center mx-6 mt-5">
-        <button className="text-white text-bold text-xl bg-green-400 px-4 py-2 rounded-md font-serif">
+      <div className="flex flex-col justify-center mx-6">
+        <button className="text-white text-bold text-xl bg-green-600 px-4 py-2 my-6 rounded-md font-serif self-center">
           Book Your Class
         </button>
         <Carousel />
       </div>
-      <div>
+
+      <div className="grid grid-cols-1 justify-items-center items-center  mt-12">
         <form>
-          <div>
+          <div className="flex mt-6 gap-3">
             <input
               placeholder="Name"
               type="text"
-              className="border border-gray-200"
+              className="border border-gray-200 pl-2 py-1"
             />
             <input
               placeholder="Surname"
               type="text"
-              className="border border-gray-200"
+              className="border border-gray-200 pl-2 py-1"
             />
           </div>
-          <div>
-            <input placeholder="Email" type="text" className="border border-gray-200"/>
-            <input placeholder="Tel number" type="text" className="border border-gray-200"/>
+          <div className="flex mt-6 gap-3">
+            <input
+              placeholder="Email"
+              type="text"
+              className="border border-gray-200 pl-2 py-1"
+            />
+            <input
+              placeholder="Tel number"
+              type="text"
+              className="border border-gray-200 pl-2 py-1"
+            />
           </div>
 
-          <input placeholder="/" className="border border-gray-200"/>
-          <textarea placeholder="Write your message" className="border border-gray-200"/>
-          <button type="sumbit"  className="bg-green-400 px-4 py-2 rounded-md">Send your request</button>
+          <div className="flex flex-col mt-6">
+            <input placeholder="/" className="border border-gray-200 pl-2 py-1" />
+            <textarea
+              placeholder="Write your message"
+              className="border border-gray-200 mt-6 pl-2 pt-2"
+            />
+            <button
+              type="sumbit"
+              className=" px-4 py-2 my-6 rounded-md font-mono bg-green-600 text-white "
+            >
+              Send your request
+            </button>
+          </div>
         </form>
       </div>
     </div>
