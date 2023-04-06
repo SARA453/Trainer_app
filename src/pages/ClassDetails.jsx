@@ -69,22 +69,24 @@ const ClassDetails = () => {
         </div>
 
         <div>
-          <p className="text-3xl mt-3 ">Schedule</p>
+          <p className="text-3xl mt-3 text-green-600 ">Schedule</p>
           <div className="flex gap-[90px] ">
-            <p>{details?.classDay}</p>
-            <p>{details?.classTime}</p>
+            <p className="text-green-600">{details?.classDay}</p>
+            <p className="text-green-600">{details?.classTime}</p>
           </div>
         </div>
         <div>
-          <p className="mt-5">{details?.classDescription}</p>
+          <p className="mt-5 text-green-600 ">{details?.classDescription}</p>
         </div>
 
         <div className="flex justify-between">
           <div className="flex flex-col">
-            <p className="text-3xl mt-12">Trainer</p>
+            <p className="text-3xl mt-12 text-green-600">Trainer</p>
 
             <img src={details?.trainer.asset.url} className="h-36 w-28 mt-5 " />
-            <p className="mt-5">{details?.trainer.trainerName}</p>
+            <p className="mt-5 text-green-600">
+              {details?.trainer.trainerName}
+            </p>
           </div>
         </div>
       </div>
