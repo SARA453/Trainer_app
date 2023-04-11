@@ -67,6 +67,7 @@ const Login = () => {
       <button
         type="submit"
         className="text-white bg-red-400 rounded px-4 py-2  mb-5"
+        style={{ fontFamily: "McLetters" }}
       >
         Log in
       </button>

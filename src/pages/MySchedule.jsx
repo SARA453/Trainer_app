@@ -31,17 +31,19 @@ const MySchedule = () => {
       <table>
         <thead>
           <tr>
-            <th></th>
-            <th></th>
-            <th></th>
+            <th>#</th>
+            <th>Title</th>
+            <th>Day</th>
+            <th>Time</th>
           </tr>
         </thead>
         {details.map((item, index) => (
           <tbody>
             <tr key={item.id}>
-              <td>{item.className}</td>
-              <td>{item.classTime}</td>
-              <td>{item.classDay}</td>
+              <td>*</td>
+              <td>h</td>
+              <td>l</td>
+              <td>l</td>
             </tr>
           </tbody>
         ))}
@@ -51,4 +53,5 @@ const MySchedule = () => {
 };
 
 export default MySchedule;
+
 */

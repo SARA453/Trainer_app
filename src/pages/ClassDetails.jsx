@@ -2,7 +2,7 @@ import axios from "axios";
 import { useParams } from "react-router";
 import useMutation from "../hooks/useMutation";
 import useQuery from "../hooks/useQuery";
-import gym from "../images/gym.png";
+
 
 const getDetail = async (id) => {
   const { data: classDetail } = await axios.get(
@@ -24,6 +24,7 @@ const addUserToClass = async ({ userId, classId }) => {
   await axios.post(
     `http://localhost:4000/api/v1/users/${userId}/classes/${classId}`,
     undefined,
+
     {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -54,14 +55,14 @@ const ClassDetails = () => {
   const userIsMember = details?.users.find((item) => item.id == userId);
 
   return (
-    <div className="container" style={{ backgroundImage: `url(${gym})` }}>
+    <div className="container">
       <div className="flex flex-col">
         <div className="relative">
           <img src={details?.asset && details?.asset.url} />
           {!userIsMember && (
             <button
               onClick={handleAddToClass}
-              className="absolute  top-[74%]  left-[950px] text-2xl bg-white px-7 py-5 rounded-tl-xl rounded-bl-xl w-[170px]"
+              className="absolute  top-[74%]  left-[950px] text-2xl  bg-green-600 text-white px-7 py-5 rounded-tl-xl rounded-bl-xl w-[170px]"
             >
               Sign up
             </button>
