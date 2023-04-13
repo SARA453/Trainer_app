@@ -1,40 +1,11 @@
 import axios from "axios";
-import { useParams } from "react-router";
+import { useParams, navigate, useNavigate } from "react-router";
 import useMutation from "../hooks/useMutation";
 import useQuery from "../hooks/useQuery";
-
-
-const getDetail = async (id) => {
-  const { data: classDetail } = await axios.get(
-    `http://localhost:4000/api/v1/classes/${id}`
-  );
-  console.log(classDetail);
-
-  const trainerId = classDetail.trainerId;
-  const { data: trainer } = await axios.get(
-    `http://localhost:4000/api/v1/trainers/${trainerId}`
-  );
-
-  classDetail.trainer = trainer;
-
-  return classDetail;
-};
-
-const addUserToClass = async ({ userId, classId }) => {
-  await axios.post(
-    `http://localhost:4000/api/v1/users/${userId}/classes/${classId}`,
-    undefined,
-
-    {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-    }
-  );
-};
+import { getDetail, addUserToClass } from "../service/classService";
 
 const ClassDetails = () => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const userId = localStorage.getItem("userId");
 
@@ -48,7 +19,7 @@ const ClassDetails = () => {
     if (userId) {
       mutate({ userId, classId: id });
     } else {
-      alert("please login");
+      navigate("login");
     }
   };
 

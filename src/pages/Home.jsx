@@ -22,8 +22,8 @@ const Home = () => {
 
       <div className="flex flex-col justify-center mx-6">
         <button
-          className="text-white text-bold text-xl bg-green-600 px-4 py-2 my-6 rounded-md self-center"
-          style={{ fontFamily: "McLetters" }}
+          className="text-white text-bold text-xl bg-green-600 px-4 py-2 my-6 rounded-md self-center font-robot"
+       
         >
           Book Your Class
         </button>
@@ -32,7 +32,7 @@ const Home = () => {
       <div>
         <p
           className="text-green-600 flex justify-center my-10 text-5xl"
-          style={{ fontFamily: "McLetters" }}
+         
         >
           OUR TEAM
         </p>
