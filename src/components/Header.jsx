@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header className="container mx-auto flex flex-col justify-end md:gap-4 mt-4 md:flex-row"
     style={{ fontFamily: "McLetters" }} >
-      <img src={SARFIT} className="h-16 w-16 self-start mr-auto" />
+      <img src={SARFIT} className="h-16 w-16 self-start mr-auto mb-2" />
       {isMediumOrLarge? <Menu/> : <HamburgerMenu/>}
     </header>
   );

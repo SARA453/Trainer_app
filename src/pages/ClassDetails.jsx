@@ -13,6 +13,7 @@ const ClassDetails = () => {
 
   const { mutate } = useMutation(addUserToClass, () => {
     alert("signup ok");
+    navigate("/myschedule")
   });
 
   const handleAddToClass = async () => {
@@ -27,13 +28,13 @@ const ClassDetails = () => {
 
   return (
     <div className="container">
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center justify-center">
         <div className="relative">
           <img src={details?.asset && details?.asset.url} />
           {!userIsMember && (
             <button
               onClick={handleAddToClass}
-              className="absolute  top-[74%]  left-[950px] text-2xl  bg-green-600 text-white px-7 py-5 rounded-tl-xl rounded-bl-xl w-[170px]"
+              className="absolute  top-[74%] right-0 left-[950px] text-2xl  bg-green-600 text-white px-7 py-5 rounded-tl-xl rounded-bl-xl w-[170px]"
             >
               Sign up
             </button>
