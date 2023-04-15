@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import { useId } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import useMutation from "../hooks/useMutation";
-import Gym from "../images/Gym.jpeg";
+import Gym from "../assets/images/Gym.jpeg";
 
 const initialValues = {
   username: "",

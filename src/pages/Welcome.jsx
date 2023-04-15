@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import welcome1 from "../images/welcome1.jpeg";
-import welcome2 from "../images/welcome2.jpeg";
+import welcome1 from "../assets/images/welcome1.jpeg";
+import welcome2 from "../assets/images/welcome2.jpeg";
 
 const Welcome = () => {
   return (

@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import SARFIT from "../images/SARFIT.png";
+import SARFIT from "../assets/images/SARFIT.png";
 import { useMediaQuery } from "@react-hook/media-query";
 import Menu from "./Menu";
 import HamburgerMenu from "./HmaburgerMenu";

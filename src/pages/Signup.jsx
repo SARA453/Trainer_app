@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import useMutation from "../hooks/useMutation";
-import gym from "../images/gym.png";
+import gym from "../assets/images/gym.png";
 import { useFormik } from "formik";
 
 const initialValues = {

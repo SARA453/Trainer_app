@@ -1,5 +1,5 @@
 @font-face {
     font-family: 'McLetters';
-    src: url('../fonts/McLetters.ttf') format('truetype');
+    src: url('../font/McLetters.ttf') format('truetype');
     /* replace 'customfont.ttf' with the filename of your font */
   }

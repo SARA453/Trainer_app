@@ -3,7 +3,7 @@ import { BsSearch } from "react-icons/bs";
 import Class from "../components/Class";
 import Trainer from "../components/Trainer";
 import useAxios from "../hooks/useAxios";
-import gym from "../images/gym.png";
+
 
 const Search = () => {
   const { data: classes } = useAxios("http://localhost:4000/api/v1/classes");

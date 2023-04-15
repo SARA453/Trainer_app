@@ -1,11 +1,10 @@
 import axios from "axios";
-import { useNavigate } from "react-router";
+
 import Carousel from "../components/Carousel";
-import Class from "../components/Class";
-import useQuery from "../hooks/useQuery";
-import Gym from "../images/Gym.jpeg";
+
+import Gym from "../assets/images/Gym.jpeg";
 import CarouselTeam from "../components/CarouselTeam";
-import "../fonts/mcLetters.css";
+
 
 const getClasses = async () => {
   const { data } = await axios.get("http://localhost:4000/api/v1/classes");
@@ -21,19 +20,13 @@ const Home = () => {
       </div>
 
       <div className="flex flex-col justify-center mx-6">
-        <button
-          className="text-white text-bold text-xl bg-green-600 px-4 py-2 my-6 rounded-md self-center font-robot"
-       
-        >
+        <button className="text-white text-bold text-xl bg-green-600 px-4 py-2 my-6 rounded-md self-center font-robot">
           Book Your Class
         </button>
         <Carousel />
       </div>
       <div>
-        <p
-          className="text-green-600 flex justify-center my-10 text-5xl"
-         
-        >
+        <p className="text-green-600 flex justify-center my-10 text-5xl">
           OUR TEAM
         </p>
         <CarouselTeam />
