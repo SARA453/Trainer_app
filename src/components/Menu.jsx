@@ -1,6 +1,6 @@
 import { NavLink, useNavigate } from "react-router-dom";
 
-const Mrenu = () => {
+const Menu = () => {
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
 
@@ -9,14 +9,14 @@ const Mrenu = () => {
     navigate("/login");
   };
   return (
-    <div className="flex gap-4 items-center">
+    <div className="flex gap-4 items-center ">
       <NavLink
         to={"/home"}
         className={({ isActive }) =>
           isActive ? "text-green-600 " : "text-black"
         }
       >
-        <button>Home</button>
+        <button className="font-['Roboto-Regular']">Home</button>
       </NavLink>
       <NavLink
         to={"/search"}
@@ -24,7 +24,7 @@ const Mrenu = () => {
           isActive ? "text-green-600 " : "text-black"
         }
       >
-        <button>Search</button>{" "}
+        <button className="font-['Roboto-Regular']">Search</button>{" "}
       </NavLink>
       <NavLink
         to={"/myschedule"}
@@ -32,7 +32,7 @@ const Mrenu = () => {
           isActive ? "text-green-600 " : "text-black"
         }
       >
-        <button>My Schedule</button>{" "}
+        <button className="font-['Roboto-Regular']">My Schedule</button>{" "}
       </NavLink>
 
       {token ? (
@@ -44,19 +44,21 @@ const Mrenu = () => {
             isActive ? "text-green-600 " : "text-black"
           }
         >
-          <button>Log in</button>
+          <button className="font-['Roboto-Regular']">Log in</button>
         </NavLink>
       )}
-       <NavLink
-          to={"/signup"}
-          className={({ isActive }) =>
-            isActive ? "text-green-600" : "text-black"
-          }
-        >
-          <button className="bg-red-400 p-2 rounded-sm">Become A Member</button>
-        </NavLink>
+      <NavLink
+        to={"/signup"}
+        className={({ isActive }) =>
+          isActive ? "text-green-600" : "text-black"
+        }
+      >
+        <button className="bg-red-400 p-2 rounded-sm font-['Roboto-Regular']">
+          Become A Member
+        </button>
+      </NavLink>
     </div>
   );
 };
 
-export default Mrenu;
+export default Menu;

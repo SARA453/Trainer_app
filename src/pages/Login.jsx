@@ -4,6 +4,7 @@ import { useId } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import useMutation from "../hooks/useMutation";
 import Gym from "../assets/images/Gym.jpeg";
+import { axiosInstance } from "../util/axiosInstance";
 
 const initialValues = {
   username: "",
@@ -11,8 +12,8 @@ const initialValues = {
 };
 
 const login = async ({ username, password }) => {
-  const { data } = await axios.post(
-    "http://localhost:4000/auth/token",
+  const { data } = await axiosInstance.post(
+    "/auth/token",
     {
       username,
       password,
@@ -66,8 +67,8 @@ const Login = () => {
 
       <button
         type="submit"
-        className="text-white bg-red-400 rounded px-4 py-2  mb-5"
-        style={{ fontFamily: "McLetters" }}
+        className="text-white bg-red-400 rounded px-4 py-2  mb-5 font-['Roboto-Regular']"
+      
       >
         Log in
       </button>

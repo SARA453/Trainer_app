@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import useMutation from "../hooks/useMutation";
 import gym from "../assets/images/gym.png";
 import { useFormik } from "formik";
+import { axiosInstance } from "../util/axiosInstance";
 
 const initialValues = {
   username: "",
@@ -12,7 +13,7 @@ const initialValues = {
 };
 
 const signup = async ({ username, password }) => {
-  await axios.post(`http://localhost:4000/api/v1/users/`, {
+  await axiosInstance.post(`/api/v1/users/`, {
     username,
     password,
   });

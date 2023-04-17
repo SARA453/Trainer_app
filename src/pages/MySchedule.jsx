@@ -1,49 +1,32 @@
-/*
-import axios from "axios";
-import { useContext, useState } from "react";
-import { ScheduleContext } from "../context/ScheduleContext";
+import { useParams } from "react-router";
 import useQuery from "../hooks/useQuery";
-
-const getClassDetail = async (id) => {
-  const { data } = await axios.get(
-    `http://localhost:4000/api/v1/classes/${id}`
-  );
-};
-
-
-const getClassDetailList = async (ids) => {
-  const list = [];
-  for (id of ids) {
-    let data = await getClassDetail(id);
-    list.push(data);
-  }
-  return list;
-};
+import { getSingleUser } from "../service/classService";
 
 const MySchedule = () => {
-  const { schedule } = useContext(ScheduleContext);
-
-  const { data: details } = useQuery(() => getClassDetailList(schedule));
-
+  const { id } = useParams();
+  const { data: details } = useQuery(() => getSingleUser(id));
   return (
-    <div>
-      <p className="text-5xl mb-10">My Schedule</p>
+    <div className="flex flex-col items-center justify-center">
+      <button className="text-5xl m-10" onClick={getSingleUser}>
+        My Schedule
+      </button>
       <table>
         <thead>
-          <tr>
+          <tr className="flex gap-2 ">
             <th>#</th>
             <th>Title</th>
             <th>Day</th>
             <th>Time</th>
           </tr>
         </thead>
-        {details.map((item, index) => (
+
+        {details?.map((item, index) => (
           <tbody>
             <tr key={item.id}>
-              <td>*</td>
-              <td>h</td>
-              <td>l</td>
-              <td>l</td>
+              <td>{index + 1}</td>
+              <td>{details?.classes.className}</td>
+              <td>{details.classes.classDay}</td>
+              <td>{details.classes.classTime}</td>
             </tr>
           </tbody>
         ))}
@@ -53,5 +36,3 @@ const MySchedule = () => {
 };
 
 export default MySchedule;
-
-*/

@@ -7,10 +7,16 @@ import HamburgerMenu from "./HmaburgerMenu";
 const Header = () => {
   const isMediumOrLarge = useMediaQuery("(min-width: 768px)");
   return (
-    <header className="container mx-auto flex flex-col justify-end md:gap-4 mt-4 md:flex-row"
-    style={{ fontFamily: "McLetters" }} >
+    <header className="container mx-auto flex flex-col justify-end md:gap-4 mt-4 md:flex-row font-['Roboto-Regular']"
+   >
       <img src={SARFIT} className="h-16 w-16 self-start mr-auto mb-2" />
-      {isMediumOrLarge? <Menu/> : <HamburgerMenu/>}
+      <div className="hidden lg:flex">
+      <Menu/> 
+      </div>
+      <div className="flex lg:hidden">
+      <HamburgerMenu/>
+      </div>
+      
     </header>
   );
 };

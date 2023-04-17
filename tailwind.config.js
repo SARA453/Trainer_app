@@ -5,7 +5,10 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    container: {
+    fontFamily:{
+     RobotoRegular :["Roboto-Regular"]
+    },
+   container: {
       center: true,
       padding: {
         DEFAULT: '1rem',

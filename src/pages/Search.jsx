@@ -4,10 +4,9 @@ import Class from "../components/Class";
 import Trainer from "../components/Trainer";
 import useAxios from "../hooks/useAxios";
 
-
 const Search = () => {
-  const { data: classes } = useAxios("http://localhost:4000/api/v1/classes");
-  const { data: trainers } = useAxios("http://localhost:4000/api/v1/trainers");
+  const { data: classes } = useAxios("/api/v1/classes");
+  const { data: trainers } = useAxios("/api/v1/trainers");
   const [query, setQuery] = useState("");
 
   const filteredClasses = classes.filter((item) =>
@@ -25,8 +24,9 @@ const Search = () => {
   return (
     <div className="container mx-auto">
       <div className="flex flex-col">
-        <p className="text-4xl text-green-600 "
-         style={{ fontFamily: 'McLetters' }}>Search</p>
+        <p className="text-4xl text-green-600 font-['Roboto-Regular'] ">
+          Search
+        </p>
         <div className="relative">
           <input
             type="text"
@@ -43,8 +43,7 @@ const Search = () => {
 
       {filteredClasses.length > 0 && (
         <div>
-          <p className="text-2xl mt-7 text-green-600 "
-           style={{ fontFamily: 'McLetters' }}>
+          <p className="text-2xl mt-7 text-green-600 font-['Roboto-Regular']">
             Popular Classes
           </p>
           <div className="grid grid-cols-3">
@@ -57,8 +56,7 @@ const Search = () => {
 
       {filteredTrainers.length > 0 && (
         <div>
-          <p className="text-2xl text-green-600  mt-5"
-           style={{ fontFamily: 'McLetters' }}>
+          <p className="text-2xl text-green-600  mt-5 font-['Roboto-Regular']">
             Popular Trainers
           </p>
           <div className="grid grid-cols-4  mt-5">

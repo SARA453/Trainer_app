@@ -11,7 +11,7 @@ const HamburgerMenu = () => {
   };
 
   return (
-    <div style={{ fontFamily: "McLetters" }}>
+    <div className="font-['Roboto-Regular']">
       <div onClick={handleClose} className="my-2">
         {isOpen ? <AiOutlineCloseSquare /> : <FaBars />}
       </div>

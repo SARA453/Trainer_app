@@ -5,9 +5,10 @@ import axios from "axios";
 import Trainer from "./Trainer";
 import { Navigate, useNavigate } from "react-router";
 import useQuery from "../hooks/useQuery";
+import { axiosInstance } from "../util/axiosInstance";
 
 const getTrainers = async () => {
-  const { data } = await axios.get("http://localhost:4000/api/v1/trainers");
+  const { data } = await axiosInstance.get("/api/v1/trainers");
   return data;
 };
 

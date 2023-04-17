@@ -1,17 +1,19 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { QueryContext } from "../context/QueryContext";
 
 const useMutation = (func, onSuccess) => {
   const [data, setData] = useState([]);
-  const [error, setError] = useState();
-  const [loading, setLoading] = useState(true);
+  const { setError, setLoading, error,loading } = useContext(QueryContext);
 
   const mutate = async (body) => {
+    setLoading(true);
     try {
       let data = await func(body);
       setData(data);
       onSuccess(data);
     } catch (error) {
-      setError(error.respose.data.message);
+      console.log(error.response)
+      setError(error.response);
     } finally {
       setLoading(false);
     }

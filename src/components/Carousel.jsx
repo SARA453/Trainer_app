@@ -1,13 +1,13 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import axios from "axios";
 import Class from "./Class";
 import { Navigate, useNavigate } from "react-router";
 import useQuery from "../hooks/useQuery";
+import { axiosInstance } from "../util/axiosInstance";
 
 const getClasses = async () => {
-  const { data } = await axios.get("http://localhost:4000/api/v1/classes");
+  const { data } = await axiosInstance.get("/api/v1/classes");
   return data;
 };
 

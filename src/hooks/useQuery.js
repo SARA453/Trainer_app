@@ -1,16 +1,18 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { QueryContext } from "../context/QueryContext";
 
 const useQuery = (func) => {
   const [data, setData] = useState();
-  const [error, setError] = useState();
-  const [loading, setLoading] = useState(true);
 
+  const { setError, setLoading,error,loading } = useContext(QueryContext);
   const handleGetData = async () => {
+    setLoading(true)
     try {
       const data = await func();
       setData(data);
     } catch (error) {
-      setError(error.response.data.message);
+      
+      setError(error.response);
     } finally {
       setLoading(false);
     }

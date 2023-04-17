@@ -7,11 +7,16 @@ import Search from "./pages/Search";
 import Welcome from "./pages/Welcome";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Provider from "./context/ScheduleContext";
+import QueryProvider from "./context/QueryContext";
+import Loading from "./components/Loading";
+import { Toaster } from "react-hot-toast";
+
 
 function App() {
   return (
-    <Provider>
+    <QueryProvider>
+      <Loading />
+      <Toaster />
       <BrowserRouter>
         <Routes>
           <Route element={<MainLayout />}>
@@ -25,7 +30,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </Provider>
+    </QueryProvider>
   );
 }
 

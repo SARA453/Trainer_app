@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { axiosInstance } from "../util/axiosInstance";
 
 const useAxios = (url) => {
     const [data, setData] = useState([]);
@@ -9,7 +10,7 @@ const useAxios = (url) => {
     const handleGetData = async () => {
       setLoading(true);
       try {
-        const { data } = await axios.get(url);
+        const { data } = await axiosInstance.get(url);
         setData(data);
       } catch (error) {
         setError(error.data);
