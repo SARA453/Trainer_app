@@ -20,42 +20,52 @@ const HamburgerMenu = () => {
           <NavLink
             to={"/home"}
             className={({ isActive }) =>
-              isActive ? "text-green-600 " : "text-black"
+              isActive
+                ? "text-green-600 border shadow p-1 rounded-sm w-12 "
+                : "text-black"
             }
           >
-            <Link>Home</Link>
+            <button className="text-sm">Home</button>
           </NavLink>
           <NavLink
             to={"/search"}
             className={({ isActive }) =>
-              isActive ? "text-green-600 " : "text-black"
+              isActive
+                ? "text-green-600 border shadow p-1 rounded-sm w-14"
+                : "text-black"
             }
           >
-            <button>Search</button>{" "}
+            <button className="text-sm">Search</button>{" "}
           </NavLink>
           <NavLink
             to={"/myschedule"}
             className={({ isActive }) =>
-              isActive ? "text-green-600 " : "text-black"
+              isActive
+                ? "text-green-600 border shadow p-1 rounded-sm w-24 "
+                : "text-black"
             }
           >
-            <button>My Schedule</button>{" "}
+            <button className="text-sm">My Schedule</button>{" "}
           </NavLink>
           <NavLink
             to={"/login"}
             className={({ isActive }) =>
-              isActive ? "text-green-600 " : "text-black"
+              isActive
+                ? "text-green-600 border shadow p-1 rounded-sm w-12 "
+                : "text-black"
             }
           >
-            <button>Log in</button>
+            <button className="text-sm">Log in</button>
           </NavLink>
           <NavLink
             to={"/signup"}
             className={({ isActive }) =>
-              isActive ? "text-green-600" : "text-black"
+              isActive
+                ? "text-green-600 border shadow rounded-sm p-1 "
+                : "text-black"
             }
           >
-            <button className="bg-red-400 px-2  mt-2 rounded-sm font-['Roboto-Regular'] h-8 text-xs">
+            <button className="  font-['Roboto-Regular'] text-sm  ">
               Become a Member
             </button>
           </NavLink>
