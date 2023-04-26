@@ -24,7 +24,7 @@ const Search = () => {
   return (
     <div className="container mx-auto">
       <div className="flex flex-col">
-        <p className="text-4xl text-green-600 font-['Roboto-Regular'] ">
+        <p className="text-4xl text-green-600 font-['Roboto-Regular'] mt-24 ">
           Search
         </p>
         <div className="relative">

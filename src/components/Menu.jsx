@@ -13,7 +13,9 @@ const Menu = () => {
       <NavLink
         to={"/home"}
         className={({ isActive }) =>
-          isActive ? "text-green-600 " : "text-black"
+          isActive
+            ? "text-green-600 border shadow p-1 rounded-sm"
+            : "text-black "
         }
       >
         <button className="font-['Roboto-Regular']">Home</button>
@@ -21,7 +23,9 @@ const Menu = () => {
       <NavLink
         to={"/search"}
         className={({ isActive }) =>
-          isActive ? "text-green-600 " : "text-black"
+          isActive
+            ? "text-green-600 border shadow p-1 rounded-sm "
+            : "text-black"
         }
       >
         <button className="font-['Roboto-Regular']">Search</button>{" "}
@@ -29,7 +33,9 @@ const Menu = () => {
       <NavLink
         to={"/myschedule"}
         className={({ isActive }) =>
-          isActive ? "text-green-600 " : "text-black"
+          isActive
+            ? "text-green-600 border shadow p-1 rounded-sm "
+            : "text-black"
         }
       >
         <button className="font-['Roboto-Regular']">My Schedule</button>{" "}
@@ -41,7 +47,9 @@ const Menu = () => {
         <NavLink
           to={"/login"}
           className={({ isActive }) =>
-            isActive ? "text-green-600 " : "text-black"
+            isActive
+              ? "text-green-600  border shadow p-1 rounded-sm"
+              : "text-black"
           }
         >
           <button className="font-['Roboto-Regular']">Log in</button>
@@ -50,10 +58,12 @@ const Menu = () => {
       <NavLink
         to={"/signup"}
         className={({ isActive }) =>
-          isActive ? "text-green-600" : "text-black"
+          isActive
+            ? "text-green-600 border shadow p-1 rounded-sm"
+            : "text-black"
         }
       >
-        <button className="bg-red-400 px-4 h-10 rounded-sm font-['Roboto-Regular']">
+        <button className="  p-1  font-['Roboto-Regular']">
           Become A Member
         </button>
       </NavLink>
