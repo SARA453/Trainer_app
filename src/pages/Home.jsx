@@ -10,23 +10,23 @@ const Home = () => {
   return (
     <div>
       <div className="relative w-full">
-        <img src={Gym} className="w-full mt-8  h-screen bg-cover bg-center" />
+        <img src={Gym} className="w-full mt-14  h-screen bg-cover bg-center" />
       </div>
 
       <div className="flex flex-col justify-center mx-6">
-        <button className="text-white text-bold text-xl bg-green-600 px-4 py-2 my-6 rounded-md self-center font-['Roboto-Regular']">
+        <button className="text-white text-bold text-xl bg-green-400 px-4 py-2 my-14 rounded-md self-center font-['Roboto-Regular']">
           Book Your Class
         </button>
         <Carousel />
       </div>
       <div>
-        <p className="text-green-600 flex justify-center my-10 text-5xl font-['Roboto-Regular']">
+        <p className="text-green-400 flex justify-center my-14 text-5xl font-['Roboto-Regular']">
           OUR TEAM
         </p>
         <CarouselTeam />
       </div>
 
-      <div className="grid grid-cols-1 justify-items-center items-center mt-16 ">
+      <div className="grid grid-cols-1 justify-items-center items-center mt-14 ">
         <form className="w-[900px]">
           <div className="flex mt-6 gap-3 justify-center">
             <input
@@ -64,7 +64,7 @@ const Home = () => {
             />
             <button
               type="sumbit"
-              className=" px-4 h-12 mt-5  rounded-md  bg-green-600 hover:bg-yellow-500 text-white font-['Roboto-Regular']   self-center "
+              className=" px-4 h-12 mt-4  mb-14  rounded-md  bg-green-400 hover:bg-yellow-500 text-white font-['Roboto-Regular']   self-center "
             >
               Send your request
             </button>

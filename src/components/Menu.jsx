@@ -14,7 +14,7 @@ const Menu = () => {
         to={"/home"}
         className={({ isActive }) =>
           isActive
-            ? "text-green-600 border shadow p-1 rounded-sm"
+            ? "text-green-400 border shadow py-1 px-2 rounded-sm"
             : "text-black "
         }
       >
@@ -24,7 +24,7 @@ const Menu = () => {
         to={"/search"}
         className={({ isActive }) =>
           isActive
-            ? "text-green-600 border shadow p-1 rounded-sm "
+            ? "text-green-400 border shadow py-1 px-2 rounded-sm "
             : "text-black"
         }
       >
@@ -34,7 +34,7 @@ const Menu = () => {
         to={"/myschedule"}
         className={({ isActive }) =>
           isActive
-            ? "text-green-600 border shadow p-1 rounded-sm "
+            ? "text-green-400 border shadow py-1 px-2 rounded-sm "
             : "text-black"
         }
       >
@@ -48,7 +48,7 @@ const Menu = () => {
           to={"/login"}
           className={({ isActive }) =>
             isActive
-              ? "text-green-600  border shadow p-1 rounded-sm"
+              ? "text-green-400  border shadow py-1 px-2 rounded-sm"
               : "text-black"
           }
         >
@@ -59,7 +59,7 @@ const Menu = () => {
         to={"/signup"}
         className={({ isActive }) =>
           isActive
-            ? "text-green-600 border shadow p-1 rounded-sm"
+            ? "text-green-400 border shadow py-1 px-2 rounded-sm"
             : "text-black"
         }
       >

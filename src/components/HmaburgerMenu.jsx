@@ -21,7 +21,7 @@ const HamburgerMenu = () => {
             to={"/home"}
             className={({ isActive }) =>
               isActive
-                ? "text-green-600 border shadow p-1 rounded-sm w-12 "
+                ? "text-green-400 border shadow p-1 rounded-sm w-12 "
                 : "text-black"
             }
           >
@@ -31,7 +31,7 @@ const HamburgerMenu = () => {
             to={"/search"}
             className={({ isActive }) =>
               isActive
-                ? "text-green-600 border shadow p-1 rounded-sm w-14"
+                ? "text-green-400 border shadow p-1 rounded-sm w-14"
                 : "text-black"
             }
           >
@@ -41,7 +41,7 @@ const HamburgerMenu = () => {
             to={"/myschedule"}
             className={({ isActive }) =>
               isActive
-                ? "text-green-600 border shadow p-1 rounded-sm w-24 "
+                ? "text-green-400 border shadow p-1 rounded-sm w-24 "
                 : "text-black"
             }
           >
@@ -51,7 +51,7 @@ const HamburgerMenu = () => {
             to={"/login"}
             className={({ isActive }) =>
               isActive
-                ? "text-green-600 border shadow p-1 rounded-sm w-12 "
+                ? "text-green-400 border shadow p-1 rounded-sm w-12 "
                 : "text-black"
             }
           >
@@ -61,7 +61,7 @@ const HamburgerMenu = () => {
             to={"/signup"}
             className={({ isActive }) =>
               isActive
-                ? "text-green-600 border shadow rounded-sm p-1 "
+                ? "text-green-400 border shadow rounded-sm p-1 "
                 : "text-black"
             }
           >
