@@ -6,9 +6,9 @@ const Welcome = () => {
   return (
     <div className="container-fluid mt-6">
       <div className="flex flex-col items-center">
-        <div classsName="relative">
+        <div className="relative">
           <img src={welcome1} />
-          <div className="absolute top-[80%] left-[20%]">
+          <div className="absolute top-[83%] left-[20%]">
             <p className="text-5xl  text-white">
               Believe <br /> Yourself
             </p>

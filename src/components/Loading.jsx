@@ -5,7 +5,7 @@ const Loading = () => {
   const { loading } = useContext(QueryContext);
 
   return (
-    <div className="fixed h-full w-full bh-red">{loading && <div>Loading...</div>}</div>
+    <div className="fixed  bh-red">{loading && <div>Loading...</div>}</div>
   );
 };
 

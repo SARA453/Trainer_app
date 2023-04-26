@@ -6,12 +6,6 @@ import Gym from "../assets/images/Gym.jpeg";
 import CarouselTeam from "../components/CarouselTeam";
 import { axiosInstance } from "../util/axiosInstance";
 
-const getClasses = async () => {
-  const { data } = await axiosInstance.get("/api/v1/classes");
-
-  return data;
-};
-
 const Home = () => {
   return (
     <div>
@@ -32,45 +26,45 @@ const Home = () => {
         <CarouselTeam />
       </div>
 
-      <div className="grid grid-cols-1 justify-items-center items-center  mt-12">
-        <form>
-          <div className="flex mt-6 gap-3">
+      <div className="grid grid-cols-1 justify-items-center items-center mt-16 ">
+        <form className="w-[900px]">
+          <div className="flex mt-6 gap-3 justify-center">
             <input
               placeholder="Name"
               type="text"
-              className="border border-gray-200 pl-2 py-1"
+              className="border border-gray-200 pl-2 py-1 w-2/4 rounded-sm"
             />
             <input
               placeholder="Surname"
               type="text"
-              className="border border-gray-200 pl-2 py-1"
+              className="border border-gray-200 pl-2 py-1 w-2/4 rounded-sm"
             />
           </div>
-          <div className="flex mt-6 gap-3">
+          <div className="flex mt-6 gap-3 justify-center">
             <input
               placeholder="Email"
               type="text"
-              className="border border-gray-200 pl-2 py-1"
+              className="border border-gray-200 pl-2 py-1 w-2/4 rounded-sm"
             />
             <input
               placeholder="Tel number"
               type="text"
-              className="border border-gray-200 pl-2 py-1"
+              className="border border-gray-200 pl-2 py-1 w-2/4 rounded-sm"
             />
           </div>
 
           <div className="flex flex-col mt-6">
             <input
               placeholder="/"
-              className="border border-gray-200 pl-2 py-1"
+              className="border border-gray-200 pl-2 py-1 rounded-sm"
             />
             <textarea
               placeholder="Write your message"
-              className="border border-gray-200 mt-6 pl-2 pt-2"
+              className="border border-gray-200 mt-6 pl-2 pt-2 rounded-sm"
             />
             <button
               type="sumbit"
-              className=" px-4 py-2 my-6 rounded-md  bg-green-600 text-white font-['Roboto-Regular'] "
+              className=" px-4 h-12 mt-5  rounded-md  bg-green-600 hover:bg-yellow-500 text-white font-['Roboto-Regular']   self-center "
             >
               Send your request
             </button>

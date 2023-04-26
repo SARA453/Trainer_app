@@ -35,7 +35,7 @@ const Signup = () => {
     },
   });
   return (
-    <form onSubmit={formik.handleSubmit}>
+    <form onSubmit={formik.handleSubmit} className="z-50">
       <div
         className="flex flex-col items-center justify-center h-screen"
         style={{ backgroundImage: `url(${gym})` }}

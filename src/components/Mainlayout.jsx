@@ -3,7 +3,8 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 const MainLayout = () => {
-    const pathname = useLocation();
+  const pathname = useLocation();
+
   return (
     <>
       <Header />
@@ -11,6 +12,6 @@ const MainLayout = () => {
       {pathname !== "/login" && <Footer />}
     </>
   );
-}
- 
+};
+
 export default MainLayout;

@@ -11,7 +11,7 @@ const HamburgerMenu = () => {
   };
 
   return (
-    <div className="font-['Roboto-Regular']">
+    <div className="font-['Roboto-Regular'] ">
       <div onClick={handleClose} className="my-2">
         {isOpen ? <AiOutlineCloseSquare /> : <FaBars />}
       </div>
@@ -23,7 +23,7 @@ const HamburgerMenu = () => {
               isActive ? "text-green-600 " : "text-black"
             }
           >
-            <button>Home</button>
+            <Link>Home</Link>
           </NavLink>
           <NavLink
             to={"/search"}
@@ -48,6 +48,16 @@ const HamburgerMenu = () => {
             }
           >
             <button>Log in</button>
+          </NavLink>
+          <NavLink
+            to={"/signup"}
+            className={({ isActive }) =>
+              isActive ? "text-green-600" : "text-black"
+            }
+          >
+            <button className="bg-red-400 px-2  mt-2 rounded-sm font-['Roboto-Regular'] h-8 text-xs">
+              Become a Member
+            </button>
           </NavLink>
         </div>
       )}

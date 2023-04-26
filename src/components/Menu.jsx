@@ -53,7 +53,7 @@ const Menu = () => {
           isActive ? "text-green-600" : "text-black"
         }
       >
-        <button className="bg-red-400 p-2 rounded-sm font-['Roboto-Regular']">
+        <button className="bg-red-400 px-4 h-10 rounded-sm font-['Roboto-Regular']">
           Become A Member
         </button>
       </NavLink>
