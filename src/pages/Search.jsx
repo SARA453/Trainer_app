@@ -23,8 +23,8 @@ const Search = () => {
 
   return (
     <div className="container mx-auto">
-      <div className="flex flex-col">
-        <p className="text-4xl text-green-400 font-['Roboto-Regular'] mt-14 ">
+      <div className="flex flex-col bg-red-200 mt-14 p-7">
+        <p className="text-4xl text-green-400 font-['Roboto-Regular'] ">
           Search
         </p>
         <div className="relative">
@@ -42,11 +42,11 @@ const Search = () => {
       </div>
 
       {filteredClasses.length > 0 && (
-        <div>
+        <div className="my-14">
           <p className="text-2xl mt-14 text-green-400 font-['Roboto-Regular']">
             Popular Classes
           </p>
-          <div className="grid grid-cols-3">
+          <div className="grid grid-cols-4 ">
             {filteredClasses.map((item) => (
               <Class {...item} key={item.id} />
             ))}
@@ -55,7 +55,7 @@ const Search = () => {
       )}
 
       {filteredTrainers.length > 0 && (
-        <div className="mb-14">
+        <div className="mb-14 bg-red-200 p-7">
           <p className="text-2xl text-green-400  mt-14 font-['Roboto-Regular']">
             Popular Trainers
           </p>

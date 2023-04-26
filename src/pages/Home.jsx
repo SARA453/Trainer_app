@@ -8,12 +8,12 @@ import { axiosInstance } from "../util/axiosInstance";
 
 const Home = () => {
   return (
-    <div>
+    <div className="container mx-au">
       <div className="relative w-full">
         <img src={Gym} className="w-full mt-14  h-screen bg-cover bg-center" />
       </div>
 
-      <div className="flex flex-col justify-center mx-6">
+      <div className="flex flex-col justify-center  bg-red-200 mt-14">
         <button className="text-white text-bold text-xl bg-green-400 px-4 py-2 my-14 rounded-md self-center font-['Roboto-Regular']">
           Book Your Class
         </button>
@@ -26,7 +26,7 @@ const Home = () => {
         <CarouselTeam />
       </div>
 
-      <div className="grid grid-cols-1 justify-items-center items-center mt-14 ">
+      <div className="flex  items-center justify-center mt-14 bg-red-200">
         <form className="w-[900px]">
           <div className="flex mt-6 gap-3 justify-center">
             <input

@@ -23,10 +23,10 @@ const Footer = () => {
       </div>
       <div className="flex gap-7 justify-center items-center mt-8 ">
         <Link>
-          <AiOutlineInstagram className="h-8 w-8  hover:text-red-500 shadow-xl shadow-white mb-5" />
+          <AiOutlineInstagram className="h-8 w-8  hover:text-red-200 shadow-xl  mb-5" />
         </Link>
         <Link>
-          <AiOutlineFacebook className="h-8 w-8 r hover:text-red-500 shadow-xl shadow-white  mb-5 " />
+          <AiOutlineFacebook className="h-8 w-8 r hover:text-red-200 shadow-xl   mb-5 " />
         </Link>
       </div>
 

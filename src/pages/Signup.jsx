@@ -1,10 +1,11 @@
-import axios from "axios";
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import useMutation from "../hooks/useMutation";
 import gym from "../assets/images/gym.png";
 import { useFormik } from "formik";
 import { axiosInstance } from "../util/axiosInstance";
+import { Link } from "react-router-dom";
+import login from "../assets/images/login.jpeg"
 
 const initialValues = {
   username: "",
@@ -35,43 +36,54 @@ const Signup = () => {
     },
   });
   return (
-    <form onSubmit={formik.handleSubmit} className="z-50">
-      <div
-        className="flex flex-col items-center justify-center h-screen"
-        style={{ backgroundImage: `url(${gym})` }}
-      >
-        <p className="mb-5 text-bold text-white">JOIN TO THE CLASS</p>
+    <div className="container  grid grid-cols-2 gap-7 mt-14">
+       <div>
+        <img src={login} className="w-full h-full" />
+       </div>
+      <div className=" w-full  h-full bg-red-200 ">
+        <form onSubmit={formik.handleSubmit}>
+          <div className="flex flex-col items-center justify-center ">
+            <p className="mb-14 text-bold mt-7 ">JOIN TO THE CLASS</p>
 
-        <input
-          type="text"
-          placeholder="Username"
-          className="border rounded py-2 w-6/12 pl-3 mb-5"
-          name="username"
-          value={formik.values.username}
-          onChange={formik.handleChange}
-        />
+            <input
+              type="text"
+              placeholder="Username"
+              className="border rounded py-2  pl-3 mb-5 w-2/4"
+              name="username"
+              value={formik.values.username}
+              onChange={formik.handleChange}
+            />
 
-        <input
-          type="password"
-          placeholder="Password"
-          className="border rounded py-2 w-6/12 pl-3 mb-5"
-          name="password"
-          value={formik.values.password}
-          onChange={formik.handleChange}
-        />
-        <input
-          type="password"
-          placeholder="Re-password"
-          className="border rounded py-2 w-6/12 pl-3 mb-5"
-          name="repeatedPassword"
-          value={formik.values.repeatedPassword}
-          onChange={formik.handleChange}
-        />
-        <button className="border rounded px-4 py-2 bg-red-400 text-white">
-          Sign up
-        </button>
+            <input
+              type="password"
+              placeholder="Password"
+              className="border rounded py-2 pl-3 mb-5 w-2/4"
+              name="password"
+              value={formik.values.password}
+              onChange={formik.handleChange}
+            />
+            <input
+              type="password"
+              placeholder="Re-password"
+              className="border rounded py-2  pl-3 mb-5 w-2/4"
+              name="repeatedPassword"
+              value={formik.values.repeatedPassword}
+              onChange={formik.handleChange}
+            />
+            <button className="border rounded px-4 py-2 bg-red-200 text-white w-2/4 ">
+              Sign up
+            </button>
+            <p className="mt-7 mb-14">
+              Already have an account?{" "}
+              <Link to={"/login"} className="text-green-400 ">
+                Login
+              </Link>
+            </p>
+          </div>
+        </form>
       </div>
-    </form>
+     
+    </div>
   );
 };
 

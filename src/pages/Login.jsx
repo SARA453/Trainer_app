@@ -45,8 +45,9 @@ const Login = () => {
   });
 
   return (
-    <form
-      className="flex flex-col  justify-center items-center h-screen bg-red-200 min-h-screen bg-cover bg-center"
+    <div className="container mx-auto mt-14"   >
+      <form
+      className="flex flex-col  justify-center items-center h-screen container mx-auto mt-14 "
       style={{ backgroundImage: `url(${Gym})` }}
       onSubmit={formik.handleSubmit}
     >
@@ -68,12 +69,14 @@ const Login = () => {
 
       <button
         type="submit"
-        className="text-white bg-red-400 rounded px-4 py-2  mb-5 font-['Roboto-Regular']"
+        className="text-white bg-red-200 rounded px-4 py-2   font-['Roboto-Regular']"
       
       >
         Log in
       </button>
-    </form>
+      </form>
+    </div>
+    
   );
 };
 
