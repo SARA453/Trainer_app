@@ -4,18 +4,18 @@ import welcome2 from "../assets/images/welcome2.jpeg";
 
 const Welcome = () => {
   return (
-    <div className="container-fluid mt-6">
+    <div className="container mx-auto mt-6">
       <div className="flex flex-col items-center">
         <div className="relative">
           <img src={welcome1} />
-          <div className="absolute top-[83%] left-[20%]">
+          <div className="absolute top-[70%] left-[22%]">
             <p className="text-5xl  text-white">
               Believe <br /> Yourself
             </p>
           </div>
           <div className="absolute top-[650px] left-[235px]">
             <Link to={"/home"}>
-              <button className="text-white text-bold text-xl bg-green-400 px-4 py-2 rounded-md font-serif">
+              <button className="text-white text-bold text-xl hover:bg-red-200 px-4 py-2 rounded-sm border  font-serif">
                 Choose Your Class
               </button>
             </Link>

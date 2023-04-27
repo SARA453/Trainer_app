@@ -36,9 +36,9 @@ const Signup = () => {
     },
   });
   return (
-    <div className="container  grid grid-cols-2 gap-7 mt-14">
+    <div className="container mx-auto  grid grid-cols-1  md:grid-cols-2  md:gap-7  md:mt-14">
        <div>
-        <img src={login} className="w-full h-full" />
+        <img src={login} className="w-full h-full mt-5 md:mt-0" />
        </div>
       <div className=" w-full  h-full bg-red-200 ">
         <form onSubmit={formik.handleSubmit}>
@@ -48,7 +48,7 @@ const Signup = () => {
             <input
               type="text"
               placeholder="Username"
-              className="border rounded py-2  pl-3 mb-5 w-2/4"
+              className="border rounded-sm py-2  pl-3 mb-5 w-2/4"
               name="username"
               value={formik.values.username}
               onChange={formik.handleChange}
@@ -57,7 +57,7 @@ const Signup = () => {
             <input
               type="password"
               placeholder="Password"
-              className="border rounded py-2 pl-3 mb-5 w-2/4"
+              className="border rounded-sm py-2 pl-3 mb-5 w-2/4"
               name="password"
               value={formik.values.password}
               onChange={formik.handleChange}
@@ -65,12 +65,12 @@ const Signup = () => {
             <input
               type="password"
               placeholder="Re-password"
-              className="border rounded py-2  pl-3 mb-5 w-2/4"
+              className="border rounded-sm py-2  pl-3 mb-5 w-2/4"
               name="repeatedPassword"
               value={formik.values.repeatedPassword}
               onChange={formik.handleChange}
             />
-            <button className="border rounded px-4 py-2 bg-red-200 text-white w-2/4 ">
+            <button className="border rounded-sm px-4 py-2 bg-red-200 hover:bg-red-300 text-white w-2/4 ">
               Sign up
             </button>
             <p className="mt-7 mb-14">

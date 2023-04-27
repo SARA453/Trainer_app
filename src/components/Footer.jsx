@@ -23,18 +23,18 @@ const Footer = () => {
       </div>
       <div className="flex gap-7 justify-center items-center mt-8 ">
         <Link>
-          <AiOutlineInstagram className="h-8 w-8  hover:text-red-200 shadow-xl  mb-5" />
+          <AiOutlineInstagram className="h-8 w-8  hover:text-red-200 shadow-xl  " />
         </Link>
         <Link>
-          <AiOutlineFacebook className="h-8 w-8 r hover:text-red-200 shadow-xl   mb-5 " />
+          <AiOutlineFacebook className="h-8 w-8  hover:text-red-200 shadow-xl  " />
         </Link>
       </div>
 
       <div className=" flex bg-white justify-center  h-11    py-2">
         <p className="font-['Roboto-Regular']">
-          Copyright 2018 sarfit | All Rights Reserved | Designer&nbsp;
+          Copyright 2018 sarfit | All Rights Reserved | Designer <span className="text-green-400">Sara</span>
         </p>
-        <p className="text-green-400"> Sara</p>
+        
       </div>
     </footer>
   );

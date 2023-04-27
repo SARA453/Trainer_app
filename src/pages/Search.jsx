@@ -46,7 +46,7 @@ const Search = () => {
           <p className="text-2xl mt-14 text-green-400 font-['Roboto-Regular']">
             Popular Classes
           </p>
-          <div className="grid grid-cols-4 ">
+          <div className="grid grid-cols-2 md:grid-cols-4 ">
             {filteredClasses.map((item) => (
               <Class {...item} key={item.id} />
             ))}
@@ -59,7 +59,7 @@ const Search = () => {
           <p className="text-2xl text-green-400  mt-14 font-['Roboto-Regular']">
             Popular Trainers
           </p>
-          <div className="grid grid-cols-4  mt-5">
+          <div className="grid grid-cols-2 md:grid-cols-4 mt-5">
             {filteredTrainers.map((item) => (
               <Trainer {...item} key={item.id} />
             ))}

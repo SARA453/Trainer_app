@@ -33,7 +33,7 @@ const ClassDetails = () => {
           {!userIsMember && (
             <button
               onClick={handleAddToClass}
-              className="absolute  top-[74%] right-0 left-[950px] text-2xl  bg-green-400 text-white px-7 py-5 rounded-tl-xl rounded-bl-xl w-[170px] font-['Roboto-Regular']"
+              className="absolute  top-[74%]  text-2xl  bg-green-400 hover:bg-green-500 text-white px-4 h-10 flex justify-center rounded-r-sm   font-['Roboto-Regular']"
             >
               Sign up
             </button>

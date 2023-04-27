@@ -55,7 +55,7 @@ const Login = () => {
         placeholder="Username"
         type="text"
         name="username"
-        className="border rounded mx-2 mb-5  pl-3 py-2 w-64"
+        className="border rounded-sm mx-2 mb-5  pl-3 py-2 w-64"
         onChange={formik.handleChange}
       />
 
@@ -63,13 +63,13 @@ const Login = () => {
         placeholder="Password"
         type="password"
         name="password"
-        className="border rounded mx-2  mb-5 pl-3 py-2 w-64"
+        className="border rounded-sm mx-2  mb-5 pl-3 py-2 w-64"
         onChange={formik.handleChange}
       />
 
       <button
         type="submit"
-        className="text-white bg-red-200 rounded px-4 py-2   font-['Roboto-Regular']"
+        className="text-white bg-red-200 hover:bg-red-300 rounded-sm px-4 py-2   font-['Roboto-Regular']"
       
       >
         Log in
