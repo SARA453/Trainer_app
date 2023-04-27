@@ -25,8 +25,8 @@ const MySchedule = () => {
             <tr key={item.id}>
               <td>{index + 1}</td>
               <td>{details?.classes.className}</td>
-              <td>{details.classes.classDay}</td>
-              <td>{details.classes.classTime}</td>
+              <td>{details?.classes.classDay}</td>
+              <td>{details?.classes.classTime}</td>
             </tr>
           </tbody>
         ))}

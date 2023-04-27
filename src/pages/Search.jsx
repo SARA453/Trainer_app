@@ -24,7 +24,7 @@ const Search = () => {
   return (
     <div className="container mx-auto">
       <div className="flex flex-col bg-red-200 mt-14 p-7">
-        <p className="text-4xl text-green-400 font-['Roboto-Regular'] ">
+        <p className="text-4xl text-white font-['Roboto-Regular'] ">
           Search
         </p>
         <div className="relative">
@@ -56,7 +56,7 @@ const Search = () => {
 
       {filteredTrainers.length > 0 && (
         <div className="mb-14 bg-red-200 p-7">
-          <p className="text-2xl text-green-400  mt-14 font-['Roboto-Regular']">
+          <p className="text-2xl text-white  mt-14 font-['Roboto-Regular']">
             Popular Trainers
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 mt-5">

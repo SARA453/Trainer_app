@@ -30,11 +30,11 @@ export const addUserToClass = async ({ userId, classId }) => {
     }
   );
 };
-export const getSingleUser = async ({ userId }) => {
-  await axiosInstance.get(`api/v1/users/${userId}`, undefined, {
+export const getSingleUser = async ({ id }) => {
+  const {data:userDetail}= await axiosInstance.get(`api/v1/users/${id}`, undefined, {
     headers: {
-
-      Authorization: `Bearer ${(localStorage.getItem("token"))}`,
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
     },
   });
+  return userDetail;
 };

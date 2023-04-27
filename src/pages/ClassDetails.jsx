@@ -12,7 +12,7 @@ const ClassDetails = () => {
 
   const { mutate } = useMutation(addUserToClass, () => {
     alert("signup ok");
-    navigate("/myschedule");
+    navigate(`/users/${id}`);
   });
 
   const handleAddToClass = async () => {

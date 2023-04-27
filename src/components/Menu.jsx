@@ -1,6 +1,7 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import {useParams, NavLink, useNavigate } from "react-router-dom";
 
 const Menu = () => {
+  const { id } = useParams();
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
 
@@ -31,7 +32,7 @@ const Menu = () => {
         <button className="font-['Roboto-Regular']">Search</button>{" "}
       </NavLink>
       <NavLink
-        to={"/myschedule"}
+        to={`/users/${id}`}
         className={({ isActive }) =>
           isActive
             ? "text-green-400 border shadow py-1 px-2 rounded-sm "
