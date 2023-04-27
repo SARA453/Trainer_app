@@ -14,7 +14,7 @@ const Home = () => {
       </div>
 
       <div className="flex flex-col justify-center  bg-red-200 mt-14">
-        <button className="text-white text-bold text-xl bg-green-400 hover:bg-green-500 px-3 h-12 my-14 rounded-sm self-center font-['Roboto-Regular']">
+        <button className="text-white text-md text-bold  bg-green-400 hover:bg-green-500 px-3 h-10 my-14 rounded-sm self-center font-['Roboto-Regular']">
           Book Your Class
         </button>
         <Carousel />
@@ -27,8 +27,8 @@ const Home = () => {
       </div>
 
       <div className="flex  items-center justify-center mt-14 bg-red-200">
-        <form className="w-[900px]">
-          <div className="flex mt-6 gap-3 justify-center">
+        <form className="w-2/4">
+          <div className="flex mt-14 gap-3 justify-center">
             <input
               placeholder="Name"
               type="text"
@@ -64,7 +64,7 @@ const Home = () => {
             />
             <button
               type="sumbit"
-              className=" px-3 h-12 mt-4  mb-14  rounded-sm  bg-green-400 hover:bg-green-500 text-white font-['Roboto-Regular']   self-center "
+              className=" px-3 h-10 mt-4  mb-14  text-mdrounded-sm  bg-green-400 hover:bg-green-500 text-white font-['Roboto-Regular']   self-center "
             >
               Send your request
             </button>

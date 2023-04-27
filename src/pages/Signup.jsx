@@ -43,7 +43,7 @@ const Signup = () => {
       <div className=" w-full  h-full bg-red-200 ">
         <form onSubmit={formik.handleSubmit}>
           <div className="flex flex-col items-center justify-center ">
-            <p className="mb-14 text-bold mt-7 ">JOIN TO THE CLASS</p>
+            <p className="mb-14 text-bold  text-lg mt-7 ">JOIN TO THE CLASS</p>
 
             <input
               type="text"
@@ -70,7 +70,7 @@ const Signup = () => {
               value={formik.values.repeatedPassword}
               onChange={formik.handleChange}
             />
-            <button className="border rounded-sm px-4 py-2 bg-red-200 hover:bg-red-300 text-white w-2/4 ">
+            <button className="border rounded-sm px-4 py-2 bg-red-200 hover:bg-red-300  w-2/4 ">
               Sign up
             </button>
             <p className="mt-7 mb-14">
