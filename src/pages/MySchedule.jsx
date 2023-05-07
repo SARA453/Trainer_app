@@ -12,7 +12,7 @@ const MySchedule = () => {
       </button>
       <table>
         <thead>
-          <tr className="flex gap-2 ">
+          <tr className="flex gap-7 items-center justify-center">
             <th>#</th>
             <th>Title</th>
             <th>Day</th>
@@ -20,13 +20,13 @@ const MySchedule = () => {
           </tr>
         </thead>
 
-        {details?.map((item, index) => (
+        {details?.classes?.map((item, index) => (
           <tbody>
             <tr key={item.id}>
               <td>{index + 1}</td>
-              <td>{details?.classes.className}</td>
-              <td>{details?.classes.classDay}</td>
-              <td>{details?.classes.classTime}</td>
+              <td>{item.className}</td>
+              <td>{item.classDay}</td>
+              <td>{item.classTime}</td>
             </tr>
           </tbody>
         ))}

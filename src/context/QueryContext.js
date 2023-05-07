@@ -5,7 +5,7 @@ import { toast } from "react-hot-toast";
 
 export const QueryContext = createContext();
 
-const QueryProvide = ({ children }) => {
+const QueryProvider = ({ children }) => {
   const [error, setError] = useState();
   const [loading, setLoading] = useState(false);
 
@@ -25,4 +25,4 @@ const QueryProvide = ({ children }) => {
   );
 };
 
-export default QueryProvide;
+export default QueryProvider;

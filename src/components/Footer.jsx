@@ -21,7 +21,7 @@ const Footer = () => {
           <p>Tel +39 3989876166</p>
         </div>
       </div>
-      <div className="flex gap-7 justify-center items-center mt-8 ">
+      <div className="flex gap-7 justify-center items-center md:mt-8 ">
         <Link>
           <AiOutlineInstagram className="h-8 w-8  hover:text-red-200 shadow-xl  " />
         </Link>
